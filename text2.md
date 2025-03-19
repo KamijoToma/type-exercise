@@ -153,5 +153,117 @@ locations in RAM to hold working data, retrieving copies of the
 standard options and defaults the user had indicated from a disk, and
 drawing initial displays on the monitor.
 
+The application program requests a copy of any information the user
+enters by making a call to a system routine. The operating system
+converts any data so entered into a standard internal form. The
+application then uses this information to decide what to do
+next--for example, perform some desired processing function such as
+reformatting a page of text, or obtain some additional information
+from another file on a disk. In either case, calls to other system
+routines are used to actually carry out the display of the results or
+the accessing of the file from the disk.
 
+When the application reaches completion or is prompted to quit, it
+makes further system calls to make sure that all data that needs to be
+saved has been written back to disk. It then makes a final system call
+to the operating system indicating that it is finished. The operating
+system then frees up the RAM and any devices that the application was
+using and awaits a command from the user to start another program.
+
+## V. History
+
+People have been storing sequences of instructions in the form of a
+program for several centuries. Music boxes of the 18th century and
+player pianos of the late 19th and early 20th centuries played musical
+programs stored as series of metal pins, or holes in paper, with each
+line (of pins or holes) representing when a note was to be played, and
+the pin or hole indicating what note was to be played at that time.
+More **elaborate** control of physical devices became common in the early
+1800s with French inventor Joseph-Marie Jacquard's invention of the
+punch-card controlled **weaving loom**. In the process of weaving a
+particular pattern, various parts of the loom had to be mechanically
+positioned. To automate this process, Jacquard used a single paper
+card to represent each positioning of the loom, with holes in the card
+to indicate which loom actions should be done. An entire **tapestry**
+could be encoded onto a deck of such cards, with the same deck
+yielding the same tapestry design each time it was used. Programs of
+over 24,000 cards were developed and used.
+
+The world's first programmable machine was designed--although never
+fully build--by the English mathematician and inventor, Charles
+Babbage. This machine, called the Analytical Engine, used punch cards
+similar to those used in the Jacquard loom to select the specific
+**arithmetic** operation to apply at each step. Inserting a different set
+of card changed the computations the machine performed. This machine
+had **counterparts** for almost everything found in modern computers,
+although it was mechanical rather than electrical. Construction of the
+Analytical Engine was never completed because the technology required
+to build did not exist at the time.
+
+The first card deck programs for the Analytical Engine were developed
+by British mathematician Augusta Ada Byron, daughter of the poet Lord
+Byron. For this reason, she is recognized as the world's first
+programmer.
+
+The modern concept of an internally stored computer program was first
+proposed by Hungarian-American mathematician John von Neumann in 1945.
+Von Neumann's idea was to use the computer's memory to store the
+program as well as the data. In this way, programs can be viewed as
+data and can be processed like data by other programs. This idea
+greatly simplifies the role of program storage and execution in
+computers.
+
+## VI. The Future
+
+The field of computer science has grown rapidly since the 1950s due to
+the increase in the use of computers. Computer programs have undergone
+many changes in response to user need and advances in technology.
+Newer ideas in computing, such as parallel computing, distributed
+computing, and artificial intelligence, have **radically** altered the
+traditional concepts that once determined program form and function.
+
+Computer scientists working in the field of parallel computing, in
+which multiple CPUs cooperate on the same problem at the same time,
+have introduced a number of new program models. In parallel computing,
+parts of a problem are worked on **simultaneously** by different
+processors, and this speeds up the solution of the problem. Many
+challenges face scientists and engineers who design programs for
+parallel processing computers, because of the extreme complexity of
+the systems and the difficulty involved in making them operate as
+effectively as possible.
+
+Another type of parallel computing called distributed computing uses
+CPUs from many interconnected computers to solve problems. Often the
+computers used to process information in a distributed computing
+applications are connected over the Internet. Internet applications
+are becoming a particularly useful form of distributed computing,
+especially with programming languages such as Java. In such
+applications, a user logs on to a Web site and downloads a Java
+program onto their computer. When the Java program is run, it
+communicates with other programs at its home Web site, and may also
+communicate with other programs running on different computers or Web
+sites.
+
+Researches into artificial intelligence (AI) has led to several other
+new styles of programming. Logic programs, for example, do not consist
+of individual instructions for the computer to follow blindly, but
+instead consist of sets of rules: if x happens then do y. A special
+program called an inference engines uses these rules to "reason" its
+way to a conclusion when presented with a new problem. Applications of
+logic programs include automatic monitoring of complex systems, and
+proving mathematical theorems.
+
+A radically differently approach to computing in which there is no
+program in the conventional sense is called a neural network. A neural
+network is a group of highly interconnected simple processing
+elements, designed to **mimic** the brain. Instead of having a program
+direct the information processing in the way that a traditional
+computer does, a neural network processes information depending upon
+the way that its processing elements are connected. Programming a
+neural network is accomplished by presenting it with known patterns of
+input and output data and adjusting the relative importance of the
+interconnections between the processing elements until the desired
+pattern matching is accomplished. Neural networks are usually
+simulated on traditional computers, but unlike traditional computer
+programs, neural networks are able to learn from their experience.
 
