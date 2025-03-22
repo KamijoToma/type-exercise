@@ -16,4 +16,3 @@ augroup RemoveTrailingWhitespace
   autocmd!
   autocmd BufWritePre *.md,*.py call RemoveTrailingWhitespace()
 augroup END
-

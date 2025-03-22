@@ -270,4 +270,3 @@ interconnections between the processing elements until the desired
 pattern matching is accomplished. Neural networks are usually
 simulated on traditional computers, but unlike traditional computer
 programs, neural networks are able to learn from their experience.
-

@@ -42,4 +42,3 @@ Content:
 Content:
 - coding
 - report
-
