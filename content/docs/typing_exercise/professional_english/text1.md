@@ -104,7 +104,7 @@ the computer from the speed limitations of the paper-type reader
 during execution and permitting problems to be solved without rewiring
 the computer.
 
-The use of the **transistor(( in computers in the late 1950s marked
+The use of the **transistor** in computers in the late 1950s marked
 the **advent** of smaller, faster, and more **versatile** **logical
 elements** than were possible with vacuum-tube machines. Because
 transistors use much less power and have a much longer life, this
