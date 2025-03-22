@@ -5,6 +5,7 @@ title: Typing Exercise
 module:
   imports:
   - path: github.com/imfing/hextra
+  - path: cj.rs/gohugo-asciinema
 
 markup:
   # allow raw html
