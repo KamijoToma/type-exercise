@@ -38,3 +38,40 @@
 - Each block is replicated (typically 3 times) to handle hardware failures and block placement exposed by NameNode so that computation can be moved to data with MapReduce framework.
 
 ![Structure of HDFS](structure-of-hdfs.png)
+
+### Introducing HDFS
+
+- HDFS uses a master/slave architecture, consisting of a NameNode and several DataNodes
+- The NameNode acts as the primary server
+- The DataNode is responsible for handling the read and write requests for the stored data
+
+### Features of HDFS
+
+Unlimited scalability
+
+- High availability
+- Data integrity
+- HDFS ACLs
+- HDFS rebalancing
+- Caching
+- APIs
+- Data Encryption
+- NFS access
+- Write Once and Read Many
+
+### Storage options on Hadoop
+
+Hadoop can store all the data regradless of what format the data is stored in.
+
+## MapReduce Parallel Computing Framework
+
+### Introducing MapReduce
+
+- MapReduce (MR) is a framework to write analytical applications in batch mode on terabytes or petabytes of data stored on HDFS.
+- An MR job usually processes each block (excluding replicas) of input file(s) in HDFS with the mapper tasks in a parallel manner.
+- The MR framework sorts and shuffles the outputs of the mappers to the reduce tasks in order to produce the output.
+- The framework takes care of computing the number of tasks needed, scheduling tasks, monitoring them, and re-executing them if they fail. The developer needs to focus only on writing the business logic.
+- MR distributes tasks to each node in the cluster and processes large data sets in parallel in a highly fault-tolerant manner.
+- In the early MapReduce framework, it was composed of a single JobTracker process running on the master node and a TaskTracker process running on each cluster slave node.
+- The master JobTracker is responsible for scheduling all the TaskTasks of the JobJob, which are distributed on different slave nodes.
+- The master node monitors the execution of each Task through the heartbeat mechanism and re-executes the previously failed tasks.
