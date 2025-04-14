@@ -53,6 +53,56 @@ Network security attacks can be classified as *passive attacks* and *active atta
 
 The **release of message contents** is easily understood. A telephone conversation, an electronic mail message, and a transferred file may contain sensitive or confidential information. We would like to prevent an opponent from learning the contents of these transmissions.
 
-**Traffic analysis** is subtler. If we had encryption protection in place, an opponent might still be able to observe the pattern of messages. The opponent could determine the location and identity of communicating hosts and could observe the frequency and
+**Traffic analysis** is **subtler**. If we had encryption protection in place, an **opponent** might still be able to observe the pattern of messages. The opponent could determine the location and identity of communicating hosts and could observe the frequency and length of messages being exchanged. This information might be useful in guessing the nature of the communication that was taking place.
 
-... to be continued ...
+Passive attacks are very difficult to detect because they do not involve any alteration of the data. Thus, the **emphasis** in dealing with passive attacks is on prevention rather than detection.
+
+**Active attacks** involve some modification of the data stream or the creation of a false stream and can be subdivided into four categories: replay, **masquerade**, modification of messages, and denial of service.
+
+**Replay** involves the passive capture of a data unit and its subsequent retransmission to produce an unauthorized effect.
+
+A **masquerade** takes place when one entity pretends to be a different entity. A masquerade attack usually include one of the other forms of active attack. For example, authentication sequences can be captured and replayed after a valid authentication sequence has taken place, thus enabling an authorized entity with few privileges to obtain extra privileges by **impersonating** an entity that has those privileges.
+
+**Modification of messages** simply means that some portion of a **legitimate** message is altered, or that messages are delayed or recorded, to produce an unauthorized effect.
+
+The **denial of service** prevents or inhibits the normal use or management of communications facilities. This attack may have a specific target; for example, an entity may **suppress** all messages directed to a particular destination. Another form of service denial is the **disruption** of an entire network, either by disabling the network or by **overloading** it with messages so as to degrade performance.
+
+It is quite difficult to prevent active attacks absolutely, because to do so would require physical protection of all communications facilities and paths at all times. Instead, the goal is to detect them and to recover from any disruption or delays caused by them.
+
+## II. Computer Security Strategy
+
+A comprehensive security strategy involves three aspects:
+
+- **Specification/policy:** What is the security scheme supposed to do?
+- **Implementation/mechanisms:** How does it do it?
+- **Correctness/assurance:** Does it really work?
+
+### 1. Security Policy
+
+In developing a security policy, a security manager needs to consider the following factors:
+
+- The value of the assets being protected.
+- The vulnerabilities of the system
+- Potential threats and the likelihood of attacks
+
+Further, the manager must consider the following tradeoffs:
+
+- **Ease of use *versus* security:** Virtually all security measures involve some **penalty** in the area of ease of use. For example, virus-checking software reduces available processing power and introduces the possibility of **system crashes** or malfunctions due to improper interaction between the security software and the operating system.
+- **Cost of security versus cost of failure and recovery:** In addition to ease of use and performance costs, there are direct **monetary** costs in implementing and maintaining security measures. All of these costs must be balanced against the cost of security failure and recovery if certain security measures are lacking.
+
+### 2. Security Implementation
+
+Security implementation involves four complementary courses of action:
+
+- **Prevention:** There is a wide range of threats in which prevention is a reasonable goal. For example, if a secure encryption algorithm is used, and if measures are in place to prevent unauthorized access to **encryption keys**, then attacks on confidentiality of the transmitted data will be prevented.
+- **Detection:** In a number of cases, absolute protection is not feasible, but it is practical to detect security attacks. For example, there are **intrusion** detection systems designed to detect the presence of unauthorized individuals logged onto a system.
+- **Response:** If security mechanisms detect an ongoing attack, the system may be able to respond in such a way as to halt the attack and prevent further damage.
+- **Recovery:** An example of recovery is the use of backup systems, so that if data integrity is compromised, a prior, correct copy of the data can be reloaded.
+
+### 3. Assurance and Evaluation
+
+Those who are "consumers" of computer security services and mechanisms desire a belief that the security measures in place work as intended. That is, security consumers want to feel that the security infrastructure of their systems meet security requirements and enforce security policies. These considerations bring us to the concepts of assurance and evaluation.
+
+**Assurance** is the degree of confidence one has that the security measures, both technical and operational, work as intended to protect the system and the information it process. This encompasses both system design and system implementation. Thus, assurance deals with the questions, "Does  the security system meet its requirements?" and "Does the security system implementation meet its specifications?" Node that assurance is expressed as a degree of confidence, not in terms of a formal proof that a design or implementation is correct. With the present **state of the art**, it is very difficult it not impossible to move beyond a degree of confidence to absolute proof.
+
+**Evaluation** is the process of examining a computer product or system with respect to certain criteria. Evaluation involves testing and may also involve formal analytic or mathematical techniques. The central **thrust** of work in this area is the development of evaluation criteria that can be applied to any security system (encompassing security services and mechanisms) and that are broadly supported for making product comparisons.
