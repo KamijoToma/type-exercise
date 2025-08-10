@@ -5,7 +5,7 @@
     "postinstall": "node scripts/install-go.js",
     "install-go": "node scripts/install-go.js",
     "setup-env": "node scripts/setup-env.js",
-    "build": "node scripts/setup-env.js && PATH=$PWD/bin:$PATH hugo --gc --minify",
+    "build": "node scripts/setup-env.js && PATH=$PWD/bin:$PATH GOROOT=$PWD/tools/go hugo --gc --minify",
     "dev": "node scripts/setup-env.js && hugo server -D --bind 0.0.0.0",
     "clean": "rm -rf public",
     "clean-all": "rm -rf public tools bin"
