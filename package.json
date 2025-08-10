@@ -8,5 +8,8 @@
   },
   "devDependencies": {
     "hugo-bin": "^0.145.1"
+  },
+  "dependencies": {
+    "golang-npm": "^0.0.6"
   }
 }
