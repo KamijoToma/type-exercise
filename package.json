@@ -2,9 +2,13 @@
   "name": "typing-exercise-skyrain",
   "version": "0.0.1",
   "scripts": {
-    "build": "hugo",
-    "create": "hugo new",
-    "serve": "hugo server"
+    "postinstall": "node scripts/install-go.js",
+    "install-go": "node scripts/install-go.js",
+    "setup-env": "node scripts/setup-env.js",
+    "build": "node scripts/setup-env.js && hugo --gc --minify",
+    "dev": "node scripts/setup-env.js && hugo server -D --bind 0.0.0.0",
+    "clean": "rm -rf public",
+    "clean-all": "rm -rf public tools bin"
   },
   "devDependencies": {
     "hugo-cli": "^0.14.0"
