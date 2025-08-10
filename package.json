@@ -7,9 +7,6 @@
     "serve": "hugo server"
   },
   "devDependencies": {
-    "hugo-bin": "^0.145.1"
-  },
-  "dependencies": {
-    "golang-npm": "^0.0.6"
+    "hugo-extended": "^0.148.2"
   }
 }
